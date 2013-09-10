@@ -1,0 +1,78 @@
+@import 'bourbon';
+@import 'neat';
+
+@include font-face(Kulturista_Medium, './Kulturista_Medium');
+@include font-face(Kulturista_Semibold, './Kulturista_Semibold');
+@include font-face(Monopol_Semibold, './Monopol_Semibold');
+
+$text-size: 12px;
+$biggest-text-size: golden-ratio($text-size, 6);
+$bigger-text-size: golden-ratio($text-size, 2);
+$big-text-size: golden-ratio($text-size, 1);
+
+$yellow: rgb(210,190,7);
+$red: rgb(203, 0, 17);
+$light-yellow: rgb(255, 255, 246);
+
+body {
+  background-color: $light-yellow;
+}
+
+div.container {
+  @include outer-container;
+  font-family: "Kulturista_Medium";
+  width: 800px;
+}
+
+h1, h2 {
+  font-family: "Monopol_Semibold";
+  margin: 0;
+}
+
+h1 {
+  margin: 0px;
+  font-size: $biggest-text-size;
+}
+
+header {
+  @include span-columns(9);
+
+  h1 span:first-child {
+    color: $yellow;
+  }
+
+  h1 span:last-child {
+    color: $red;
+    margin-left: $biggest-text-size/-2;
+  }
+
+  h2 {
+    @include transform(rotate(270deg));
+    @include transform-origin(left bottom);
+
+    font-size: $bigger-text-size;
+    position: relative;
+    top: -90px;
+
+    span:first-child {
+      color: $yellow;
+    }
+
+    span:last-child {
+      color: $red;
+    }
+  }
+}
+
+.vcard {
+  @include span-columns(3);
+  color: $red;
+  @include pad(20px 0);
+  line-height: 1.44;
+  text-align: right;
+}
+
+
+h3 {
+  font-size: $big-text-size;
+}
