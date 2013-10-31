@@ -34,31 +34,33 @@ html.nojs
 
     div.container
       header
-        h1
-          span LAST
-          span STAR
         h2
           span Ruby&
           span Reason
-      div class="vcard"
-        p class="email" info@laststar.eu
-        p class="adr"
-          span class="street-address" Husova 1200
-          br
-          span class="postal-code" 460 01&nbsp;
-          span class="region" Liberec
-        p class="billing"
-          | IČO:
-          span class="id" 29051649
-          br
-          | DIČ:
-          span class="vat-id" CZ29051649
-          br
-          | BÚ:
-          span class="Bank number" 2100155025/2010
+        h1
+          span LAST
+          span STAR
+        div class="vcard"
+          p class="email" info@laststar.eu
+          p class="adr"
+            span class="street-address" Husova 1200
+            br
+            span class="postal-code" 460 01&nbsp;
+            span class="region" Liberec
+          p class="billing"
+            | IČO:
+            span class="id" 29051649
+            br
+            | DIČ:
+            span class="vat-id" CZ29051649
+            br
+            | BÚ:
+            span class="Bank number" 2100155025/2010
 
 
-    == yield
+      == yield
+
+      footer Copyright 2013 LastStar.eu
 
     = javascript_include_tag 'app'
     = partial 'partials/_ga'

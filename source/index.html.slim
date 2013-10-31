@@ -1,0 +1,17 @@
+section id="motto"
+  p Dobrý den,
+
+  p
+    | jsme firma malých rozměrů, ale velkých cílů a dovedností. Pevně věříme,
+    |  že&nbsp; informační technologie mají být hlavně ku pomoci svým uživatelům.
+
+  p
+    | Ať už potřebujete udělat vizuální styl pro malou firmu, nebo systém
+    |  velké složitosti, ozvěte se nám! Určitě najdeme nejjednodušší řešení.
+
+section id="showcases"
+  h2 Ukázka z našich prací:
+
+  - %w(suitcasetype typetogether edoktorand).each do |showcase|
+    = partial "partials/#{showcase}.html.slim"
+
