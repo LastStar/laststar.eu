@@ -10,6 +10,7 @@ gem "middleman-neat", "~> 0.0.4"
 
 # Blogging
 gem "middleman-blog"
+gem "nokogiri"
 
 # XML Feeds
 gem "builder", "~> 3.0.0"
@@ -22,3 +23,6 @@ gem "middleman-syntax"
 
 # Crush dems images
 gem "middleman-imageoptim", "~> 0.0.4"
+
+# javascript runtime
+gem 'therubyracer'
