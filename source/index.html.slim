@@ -1,14 +1,22 @@
 section id="motto"
-  p Dobrý den,
+  h2 Motto
 
   p
-    | jsme firma malých rozměrů, ale velkých cílů a dovedností. Pevně věříme,
-    |  že&nbsp; informační technologie mají být hlavně ku pomoci svým uživatelům.
-
+    | Kontrola a směřování informačních systémů musí přejít z rukou mumlajících podivínů v bílých pláštích do rukou uživatelů těchto systémů.
   p
-    | Ať už potřebujete udělat vizuální styl pro malou firmu, nebo systém
-    |  velké složitosti, ozvěte se nám! Určitě najdeme nejjednodušší řešení.
+    |  Ing. Josef Pospíšil, technický ředitel
 
+- if blog.articles.present?
+  section id="blog"
+    h2 Z blogu
+    - blog.articles[0...3].each do |article|
+      article
+        div class="head"
+          time = article.date.strftime('%Y-%m-%d')
+          h4
+            a href=article.url = article.title
+        div class="body"
+          = article.summary
 section id="showcases"
   h2 Ukázka z našich prací:
 
