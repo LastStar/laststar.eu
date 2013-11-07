@@ -10,9 +10,10 @@ $bigger-text: golden-ratio($text, 2);
 $big-text: golden-ratio($text, 1);
 
 $yellow: rgb(255, 204, 51);
-$red: rgb(203, 0, 17);
-$white: rgb(253, 253, 253);
-$grey: shade($white, 10%);
+$red: #cb0011;
+$white: shade(rgb(255, 255, 255), 1%);
+$grey: shade($white, 4%);
+$black: shade($white, 80%);
 
 @mixin title-font {
   font-family: "Monopol_Semibold";
@@ -22,10 +23,12 @@ $grey: shade($white, 10%);
   font-family: "Comenia_Sans_Regular";
 }
 
-$main-width: 44em;
+$main-width: 48em;
+$content-width: 44em;
 
 body {
-  background-color: $white;
+  background-color: $grey;
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -52,14 +55,18 @@ h3 {
 div.container {
   @include outer-container;
   @include text-font;
+  box-shadow: 0 0 0.67em $black;
   width: $main-width;
+  background-color: $white;
 
   header {
     @include span-columns(12);
     @include omega;
+    @include pad(0 2em);
 
     h1 {
       @include span-columns(9 of 12);
+      @include pad(0 0 0 0.03em);
 
       span:first-child {
         color: $red;
@@ -74,11 +81,15 @@ div.container {
     h2 {
       @include transform(rotate(270deg));
       @include transform-origin(left top);
+      box-shadow: 0 0 0.75em $black;
+      background-color: $white;
+      z-index: -1;
 
       position: fixed;
       top: 6em;
       width: 4em;
-      margin-left: -1em;
+      margin-left: -2.2em;
+      padding-left: 0.5em;
 
       span:first-child {
         color: $red;
@@ -91,7 +102,7 @@ div.container {
 
     .vcard {
       @include span-columns(3 of 12);
-      @include pad(5em 0 0 0);
+      @include pad(5em 1em 0 0);
       @include omega;
 
       color: $red;
@@ -100,32 +111,65 @@ div.container {
     }
   }
 
-  section#motto {
-    @include outer-container;
-    @include pad(0 0.5em);
-  }
-
-  section#showcases {
-    @include omega;
+  section {
+    @include pad(0 2em);
     @include span-columns(12);
 
     h2:first-child {
       @include span-columns(12);
-      @include pad(0 0.25em);
       font-size: $bigger-text;
       color: $red;
     }
+  }
 
+  section#motto {
+    p {
+      font-size: $bigger-text;
+      font-family: Monopol_Semibold;
+    }
+  }
+
+  section#blog {
+    article {
+      .head {
+        font-family: Monopol_Semibold;
+
+        h4 {
+          @include span-columns(10 of 12);
+          @include shift(4);
+          margin: 0.5em 0;
+
+          a {
+            color: $red;
+            text-decoration: none;
+          }
+        }
+
+        time {
+          @include span-columns(1 of 12);
+          margin: 0.5em 0;
+          color: $red;
+        }
+      }
+
+      .body {
+          @include span-columns(12 of 12);
+      }
+
+
+    }
+  }
+
+  section#showcases {
     a {
       @include omega;
       display: block;
-      width: $main-width;
+      width: $content-width;
       height: 42em;
       margin-top: 3em;
       opacity: 0.75;
 
       &:hover {
-        box-shadow: 4px 4px 5px $grey;
         opacity: 1;
       }
 
