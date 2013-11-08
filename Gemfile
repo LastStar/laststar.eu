@@ -21,9 +21,6 @@ gem "middleman-livereload", "~> 3.1.0"
 # Syntax highlighting
 gem "middleman-syntax"
 
-# Crush dems images
-gem "middleman-imageoptim", "~> 0.1.0"
-
 # javascript runtime
 gem 'therubyracer'
 
