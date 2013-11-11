@@ -5,14 +5,14 @@ tags: launch, website
 motto: Při řešení rozsáhlejších projektů je potřeba vždy dbát hlavně o vztah k zákazníkovi.
 ---
 
-Po dvou letech, nesčetných přepisech, ladění a broušení, byl dnes spuštěn
+Po dvou letech, nesčetných přepisech, ladění a broušení, bylo dnes spuštěno
 nové webové sídlo pro jednu z nejlepších písmolijen v naší republice. Přejeme
 vše nejlepší do startu!
 READMORE
 
 ## Redesign webových stránek české písmolijny Suitcase Type Foundry
 
-V roce 2010, chvíli po startu naší společnosti, jsme byli přizvání na vytváření nových webových stránek významné české písmolijny. Původně v subdodávce pro designové studio Shortcat.
+V roce 2010, chvíli po startu naší společnosti, jsme byli přizváni na vytváření nových webových stránek významné české písmolijny. Původně se jednalo o subdodávku pro designové studio Shortcat.
 
 Po nesčetných redesignech, výměnách front end kodérů a mnoha obratech byly stránky spuštěny. Obsahují nejen kompletní prezentaci písem a prací. Dále je součástí moderní internetový obchod, kde je možné veškerá písma zakoupit a zaplatit.
 
