@@ -13,7 +13,7 @@ html.nojs
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
-    title = "LastStar -#{current_page.data.title}"
+    title = "LastStar - #{current_page.data.title}"
     meta name="description" content=""
     meta name="viewport" content="width=device-width, initial-scale=1"
 
@@ -37,9 +37,10 @@ html.nojs
         h2
           span Ruby&
           span Reason
-        h1
-          span LAST
-          span STAR
+        a href="/"
+          h1
+            span LAST
+            span STAR
         div class="vcard"
           p class="email" info@laststar.eu
           p class="adr"
@@ -48,15 +49,21 @@ html.nojs
             span class="postal-code" 460 01&nbsp;
             span class="region" Liberec
           p class="billing"
-            | IČO:
+            span IČO:&nbsp;
             span class="id" 29051649
             br
-            | DIČ:
+            span DIČ:&nbsp;
             span class="vat-id" CZ29051649
             br
-            | BÚ:
+            span BÚ:&nbsp;
             span class="Bank number" 2100155025/2010
 
+
+      section id="motto"
+        h2 Motto
+
+        p
+          == current_page.data.motto
 
       == yield
 

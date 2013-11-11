@@ -4,27 +4,45 @@
 @include font-face(Comenia_Sans_Regular, './Comenia_Sans_Regular');
 @include font-face(Monopol_Semibold, './Monopol_Semibold', bold);
 
-$text: 12px;
-$biggest-text: golden-ratio($text, 6);
-$bigger-text: golden-ratio($text, 2);
+$text: 14px;
 $big-text: golden-ratio($text, 1);
+$bigger-text: golden-ratio($text, 2);
+$biggest-text: golden-ratio($text, 6);
+
+$main-width: 50em;
+$content-width: 46em;
 
 $yellow: rgb(255, 204, 51);
+$light-yellow: lighten($yellow, 38%) ;
 $red: #cb0011;
+$light-red: lighten($red, 59%) ;
 $white: shade(rgb(255, 255, 255), 1%);
 $grey: shade($white, 4%);
 $black: shade($white, 80%);
 
 @mixin title-font {
   font-family: "Monopol_Semibold";
+  color: $yellow;
 }
 
 @mixin text-font {
   font-family: "Comenia_Sans_Regular";
+  color: $black;
 }
 
-$main-width: 48em;
-$content-width: 44em;
+@mixin red-section {
+  @include outer-container;
+
+  border-top: 0.15em solid $red;
+  background-color: $light-red;
+}
+
+@mixin yellow-section {
+  @include outer-container;
+
+  border-top: 0.15em solid $yellow;
+  background-color: $light-yellow;
+}
 
 body {
   background-color: $grey;
@@ -60,12 +78,13 @@ div.container {
   background-color: $white;
 
   header {
-    @include span-columns(12);
-    @include omega;
+    @include row;
     @include pad(0 2em);
 
+    @include yellow-section;
+
     h1 {
-      @include span-columns(9 of 12);
+      @include span-columns(8);
       @include pad(0 0 0 0.03em);
 
       span:first-child {
@@ -81,14 +100,14 @@ div.container {
     h2 {
       @include transform(rotate(270deg));
       @include transform-origin(left top);
-      box-shadow: 0 0 0.75em $black;
-      background-color: $white;
-      z-index: -1;
+      @include red-section;
 
+      box-shadow: 0 0 0.75em $black;
+      z-index: -1;
       position: fixed;
       top: 6em;
       width: 4em;
-      margin-left: -2.2em;
+      margin-left: -2.3em;
       padding-left: 0.5em;
 
       span:first-child {
@@ -101,43 +120,59 @@ div.container {
     }
 
     .vcard {
-      @include span-columns(3 of 12);
-      @include pad(5em 1em 0 0);
+      @include span-columns(4);
+      @include pad(2.5em 0 0 0);
       @include omega;
 
       color: $red;
-      font-size: $text;
+      font-size: $big-text;
       text-align: right;
+
+      p {
+        margin: 0.25em 0;
+      }
     }
   }
 
   section {
-    @include pad(0 2em);
+    @include pad(1em 2em);
     @include span-columns(12);
 
     h2:first-child {
       @include span-columns(12);
       font-size: $bigger-text;
-      color: $red;
+      color: $yellow;
     }
   }
 
   section#motto {
+    @include red-section;
+
+    h2 {
+      @include span-columns(2);
+      @include omega;
+    }
+
     p {
-      font-size: $bigger-text;
-      font-family: Monopol_Semibold;
+      @include span-columns(9);
+
+      margin-top: 0.5em;
+      color: $black;
     }
   }
 
   section#blog {
+    @include yellow-section;
+
     article {
       .head {
-        font-family: Monopol_Semibold;
+        @include row;
 
         h4 {
-          @include span-columns(10 of 12);
-          @include shift(4);
-          margin: 0.5em 0;
+          @include span-columns(10);
+
+          margin: 0.5em 0 0 0;
+          font-weight: normal;
 
           a {
             color: $red;
@@ -146,69 +181,94 @@ div.container {
         }
 
         time {
-          @include span-columns(1 of 12);
-          margin: 0.5em 0;
-          color: $red;
+          @include span-columns(2);
+          @include omega;
+
+          margin: 0.5em 0 0 0;
+          color: $black;
         }
       }
 
       .body {
-          @include span-columns(12 of 12);
+        @include row;
+
+        p.tags {
+          @include span-columns(2);
+          @include omega;
+
+          font-size: $text;
+
+          a {
+            text-decoration: none;
+            color: $red;
+          }
+        }
+
+        p {
+          @include span-columns(10);
+        }
       }
-
-
     }
   }
 
   section#showcases {
+    @include red-section;
+
     a {
+      @include span-columns(6);
       @include omega;
+
       display: block;
-      width: $content-width;
-      height: 42em;
-      margin-top: 3em;
+      height: 21em;
       opacity: 0.75;
 
       &:hover {
         opacity: 1;
       }
 
-      &:first-child {
-        margin-top: 0px;
-      }
-
       h3 {
-        @include span-columns(5 of 12);
-        @include shift(2);
-        @include omega;
+        @include span-columns(5 of 6);
         @include pad(1em);
+        color: red;
 
         margin-top: 2em;
         margin-bottom: 0em;
-        color: $yellow;
-        background-color: $red;
+        @include yellow-section;
       }
 
       p {
-        @include shift(2);
-        @include span-columns(5 of 12);
-        @include pad(1em);
+        @include span-columns(5 of 6);
+        @include pad(1.5em);
         margin-top: 0px;
-        color: $red;
-        background-color: $yellow;
-        font-size: $text;
+        color: $black;
+        background-color: $light-yellow;
       }
     }
 
   }
 
+  div.blog {
+    @include pad(1em 2em);
+    @include span-columns(12);
+    @include yellow-section;
+
+
+    h2 {
+      color: $red;
+    }
+
+    p:first-child {
+      display: none;
+    }
+  }
+
   footer {
     @include title-font;
-    @include pad(2em);
+    @include pad(0.5em);
     @include row;
     @include span-columns(12);
+    @include yellow-section;
 
-    font-size: $text;
     text-align: center;
     color: $red;
   }

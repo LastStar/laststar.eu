@@ -1,11 +1,7 @@
-section id="motto"
-  h2 Motto
-
-  p
-    | Kontrola a směřování informačních systémů musí přejít z rukou mumlajících podivínů v bílých pláštích do rukou uživatelů těchto systémů.
-  p
-    |  Ing. Josef Pospíšil, technický ředitel
-
+---
+title: Ruby&Reason
+motto: Kontrola a směřování informačních systémů musí přejít z&nbsp;rukou mumlajících podivínů v bílých pláštích do&nbsp;rukou uživatelů těchto systémů.
+---
 - if blog.articles.present?
   section id="blog"
     h2 Z blogu
@@ -16,10 +12,14 @@ section id="motto"
           h4
             a href=article.url = article.title
         div class="body"
+          p class="tags"
+            - article.tags.each do |tag|
+              a href="/tag/#{tag}" = tag
           = article.summary
+
 section id="showcases"
   h2 Ukázka z našich prací:
 
-  - %w(suitcasetype typetogether edoktorand).each do |showcase|
+  - %w(suitcasetype typetogether edoktorand wrabec).each do |showcase|
     = partial "partials/#{showcase}.html.slim"
 
