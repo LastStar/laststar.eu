@@ -5,6 +5,7 @@
 @include font-face(Monopol_Semibold, './Monopol_Semibold', bold);
 
 $text: 14px;
+$small-text: golden-ratio($text, -1);
 $big-text: golden-ratio($text, 1);
 $bigger-text: golden-ratio($text, 2);
 $biggest-text: golden-ratio($text, 6);
@@ -42,6 +43,19 @@ $black: shade($white, 80%);
 
   border-top: 0.15em solid $yellow;
   background-color: $light-yellow;
+}
+
+@mixin outlined-title {
+  @include span-columns(12);
+  @include pad(0 0 0.5em default);
+
+  text-shadow:
+    -1px -1px 2px $red,
+    1px -1px 2px $red,
+    -1px 1px 2px $red,
+    1px 1px 2px $red;
+  font-size: $bigger-text;
+  color: $yellow;
 }
 
 body {
@@ -139,9 +153,7 @@ div.container {
     @include span-columns(12);
 
     h2:first-child {
-      @include span-columns(12);
-      font-size: $bigger-text;
-      color: $yellow;
+      @include outlined-title;
     }
   }
 
@@ -192,15 +204,27 @@ div.container {
       .body {
         @include row;
 
-        p.tags {
+        div.tags {
           @include span-columns(2);
+          @include pad(1.5em 0);
           @include omega;
 
-          font-size: $text;
+          font-size: $small-text;
 
           a {
+            @include pad(0.5em 0.75em);
+
             text-decoration: none;
             color: $red;
+            display: inline-block;
+            background-color: $yellow;
+            border-color: $yellow;
+            border-radius: 0.3em;
+            margin-top: 0.5em;
+
+            &:hover {
+              color: $light-red;
+            }
           }
         }
 
@@ -208,6 +232,14 @@ div.container {
           @include span-columns(10);
         }
       }
+    }
+
+    p:first-child {
+      display: none;
+    }
+
+    h2 {
+      @include outlined-title;
     }
   }
 
@@ -247,21 +279,6 @@ div.container {
 
   }
 
-  div.blog {
-    @include pad(1em 2em);
-    @include span-columns(12);
-    @include yellow-section;
-
-
-    h2 {
-      color: $red;
-    }
-
-    p:first-child {
-      display: none;
-    }
-  }
-
   footer {
     @include title-font;
     @include pad(0.5em);
@@ -270,7 +287,7 @@ div.container {
     @include yellow-section;
 
     text-align: center;
-    color: $red;
+    color: $yellow;
   }
 }
 

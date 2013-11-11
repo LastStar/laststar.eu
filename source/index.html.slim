@@ -4,22 +4,14 @@ motto: Kontrola a směřování informačních systémů musí přejít z&nbsp;r
 ---
 - if blog.articles.present?
   section id="blog"
-    h2 Z blogu
-    - blog.articles[0...3].each do |article|
-      article
-        div class="head"
-          time = article.date.strftime('%Y-%m-%d')
-          h4
-            a href=article.url = article.title
-        div class="body"
-          p class="tags"
-            - article.tags.each do |tag|
-              a href="/tag/#{tag}" = tag
-          = article.summary
+    a href="/blog/"
+      h2 Z blogu
+      - blog.articles[0...3].each do |article|
+        = partial("partials/article.slim", locals: { article: article })
 
 section id="showcases"
   h2 Ukázka z našich prací:
 
-  - %w(suitcasetype typetogether edoktorand wrabec).each do |showcase|
+  - %w(wrabec suitcasetype typetogether edoktorand).each do |showcase|
     = partial "partials/#{showcase}.html.slim"
 

@@ -1,0 +1,11 @@
+article
+  div class="head"
+    time = article.date.strftime('%Y-%m-%d')
+    h4
+      a href=article.url = article.title
+  div class="body"
+    div class="tags"
+      - article.tags.each do |tag|
+        a href=tag_path(tag) = tag
+        | &nbsp;
+    = article.summary

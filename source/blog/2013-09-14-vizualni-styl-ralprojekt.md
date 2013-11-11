@@ -1,11 +1,11 @@
 ---
-title: RAL Projekt - vizuální styl
+title: Vizuální styl pro RAL Projekt
 date: 2013-09-14
-tags: lauch, identity, Liberec
+tags: launch, identity
 motto: Vizuální styl by měl navozovat náladu odvětví v kterém se firma vyskytuje nejvíce.
 ---
 
-Kde najít první bod designu? V čem se liší vizuální styl pro projektovou kancelář se blíže dozvíte v tomto příspěvku.
+Kde najít výchozí bod designu? V čem se liší vizuální styl pro projektovou kancelář se blíže dozvíte v tomto příspěvku.
 READMORE
 
 ## Nový vizuální styl pro novou projektovou kancelář

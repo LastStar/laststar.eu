@@ -1,7 +1,7 @@
 ---
 title: Spuštěn redesign Suitcase Type Foundry
 date: 2012-10-11
-tags: launch, SCT
+tags: launch, website
 motto: Při řešení rozsáhlejších projektů je potřeba vždy dbát hlavně o vztah k zákazníkovi.
 ---
 

@@ -1,8 +1,8 @@
 ---
-motto: Rozděl a panuj platí v informačních technologií více než kde jinde
+motto: Každý systém musí být postaven co nejdynamičtěji, stárnutí je možná největší problém v&nbsp;IT.
 ---
 section id="blog"
-  h2 Články na&nbsp;blogu označené '#{tagname}'
+  h2 Blog
 
   - page_articles.each do | article |
     = partial("partials/article.slim", locals: { article: article })
