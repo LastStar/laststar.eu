@@ -10,7 +10,7 @@ READMORE
 
 ## Nový vizuální styl pro novou projektovou kancelář
 
-Byli jsme osloveni nově vzniklou projektovou kanceláří abychom jí vytvořili vizuální identitu.
+Byli jsme osloveni nově vzniklou projektovou kanceláří, abychom jí vytvořili vizuální identitu.
 
 Pro tento účel jsme vybrali písmo Tabac Slab jako logotyp doplněný písmem Tabac Sans jako textové písmo.
 
