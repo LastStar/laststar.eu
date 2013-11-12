@@ -5,7 +5,7 @@ tags: launch, middleman, identity, bourbon
 motto: Při práci pro neziskové společnosti nepočítáme se ziskem.
 ---
 
-Moderní responzivní design webových stránek pro neziskovou společnost. 
+Moderní responzivní design webových stránek pro neziskovou společnost.
 READMORE
 
 ## Nový web a vizuální styl pro Wrabce z Liberce

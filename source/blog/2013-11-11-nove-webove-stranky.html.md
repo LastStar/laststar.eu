@@ -5,7 +5,7 @@ tags: launch, middleman, website, bourbon
 motto: Ani ta pověstná kovářova kobyla nesmí chodit bosa do smrti.
 ---
 
-Dnešním dnem jsme spustili nové webové stránky naší společnosti. Stránky jsou evolucí těch starých co se týče vizuálna, avšak naprosto nové strukturou a&nbsp;technologiemi.
+Dnešním dnem jsme spustili nové webové stránky naší společnosti. Stránky jsou spíše evolucí těch starých, avšak naprosto nové strukturou a&nbsp;technologiemi.
 READMORE
 
 ## Nové webové stránky naší společnosti

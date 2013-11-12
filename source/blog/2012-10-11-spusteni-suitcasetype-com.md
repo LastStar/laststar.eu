@@ -6,8 +6,7 @@ motto: Při řešení rozsáhlejších projektů je potřeba vždy dbát hlavně
 ---
 
 Po dvou letech, nesčetných přepisech, ladění a broušení, bylo dnes spuštěno
-nové webové sídlo pro jednu z nejlepších písmolijen v naší republice. Přejeme
-vše nejlepší do startu!
+nové webové sídlo pro jednu z nejlepších písmolijen v naší republice.
 READMORE
 
 ## Redesign webových stránek české písmolijny Suitcase Type Foundry
