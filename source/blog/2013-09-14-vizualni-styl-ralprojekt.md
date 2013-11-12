@@ -2,7 +2,7 @@
 title: Vizuální styl pro RAL Projekt
 date: 2013-09-14
 tags: launch, identity
-motto: Vizuální styl by měl navozovat náladu odvětví v kterém se firma vyskytuje nejvíce.
+motto: Vizuální styl by měl navozovat náladu odvětví v kterém se firma vyskytuje.
 ---
 
 Kde najít výchozí bod designu? V čem se liší vizuální styl pro projektovou kancelář se blíže dozvíte v tomto příspěvku.
