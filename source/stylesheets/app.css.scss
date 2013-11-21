@@ -14,9 +14,9 @@ $main-width: 50em;
 $content-width: 46em;
 
 $yellow: rgb(255, 204, 51);
-$light-yellow: lighten($yellow, 38%) ;
+$light-yellow: tint($yellow, 90%) ;
 $red: #cb0011;
-$light-red: lighten($red, 59%) ;
+$light-red: tint($red, 98%) ;
 $white: shade(rgb(255, 255, 255), 1%);
 $grey: shade($white, 4%);
 $black: shade($white, 80%);
